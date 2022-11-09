@@ -20,11 +20,12 @@ concurrency:
   group: "pages"
   cancel-in-progress: true
 
+defaults:
+  run:
+    shell: bash
+    working-directory: ./
+
 jobs:
-  defaults:
-    run:
-      shell: bash
-      working-directory: ./
   # Build job
   build:
     runs-on: ubuntu-latest
