@@ -1,11 +1,20 @@
 import logo from './logo.svg';
 import './App.css';
+import {useEffect} from "react";
+import {useNavigate} from "react-router";
 
 function App() {
+  const navigate = useNavigate();
+
+  useEffect(() => {
+    navigate('/home');
+  }, []);
+
   return (
     <div className="App">
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
+        <p>TEST TEST TEST</p>
         <p>
           Edit <code>src/App.js</code> and save to reload.
         </p>
