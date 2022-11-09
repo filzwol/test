@@ -20,11 +20,6 @@ concurrency:
   group: "pages"
   cancel-in-progress: true
 
-defaults:
-  run:
-    shell: bash
-    working-directory: ./../
-
 jobs:
   # Build job
   build:
@@ -37,7 +32,7 @@ jobs:
       - name: Install
         run: npm install
       - name: Build with Jekyll
-        run: npm run build
+        run: ["npm", "run", "build", "ls"]
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v1
 
