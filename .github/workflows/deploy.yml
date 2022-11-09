@@ -32,7 +32,9 @@ jobs:
       - name: Install
         run: npm install
       - name: Build with Jekyll
-        run: ["npm", "run", "build", "ls"]
+        run: |
+          ls
+          npm run build
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v1
 
