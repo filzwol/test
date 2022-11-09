@@ -21,6 +21,10 @@ concurrency:
   cancel-in-progress: true
 
 jobs:
+  defaults:
+    run:
+      shell: bash
+      working-directory: ./
   # Build job
   build:
     runs-on: ubuntu-latest
