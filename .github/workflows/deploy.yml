@@ -34,6 +34,7 @@ jobs:
       - name: Build with Jekyll
         run: |
           ls
+          ls ..
           npm run build
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v1
